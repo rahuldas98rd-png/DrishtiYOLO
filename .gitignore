@@ -1,0 +1,73 @@
+# ── Credentials & personal data ───────────────────────────────────────────────
+# Cookie files contain live session tokens — never commit these
+*_cookies.txt
+*.cookie
+.env
+*.env
+secrets/
+.netrc
+
+# ── Model weights (large binaries — host on HF Hub / Roboflow instead) ────────
+*.pt
+*.pth
+*.onnx
+*.engine
+*.bin
+*.safetensors
+
+# ── Videos & large media (store externally) ───────────────────────────────────
+# Raw input clips
+assets/clips/
+# Webcam recordings and snapshots
+assets/recordings/
+assets/snapshots/
+# Generated comparison videos
+assets/*.mp4
+assets/*.avi
+assets/*.mov
+assets/*.mkv
+assets/**/*.mp4
+assets/**/*.avi
+assets/**/*.mov
+assets/**/*.mkv
+
+# ── Datasets (download separately via IDD portal) ─────────────────────────────
+datasets/
+data/
+idd_yolo/
+idd_detection/
+
+# ── Training & experiment outputs ─────────────────────────────────────────────
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# ── Google Drive sync temp files ──────────────────────────────────────────────
+.tmp.driveupload/
+.tmp.drivedownload/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Archives ──────────────────────────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

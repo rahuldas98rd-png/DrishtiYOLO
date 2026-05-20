@@ -1,0 +1,36 @@
+# IDD Detection Dataset — Ultralytics YAML
+# Source: idd.insaan.iiit.ac.in
+# License: non-commercial research
+
+path: /content/idd_detection      # root set per Colab session
+train: images/train
+val: images/val
+test: images/test                  # optional; IDD ships a test split
+
+# 15 classes — IDD Detection split
+nc: 15
+names:
+  0: auto_rickshaw
+  1: bicycle
+  2: bus
+  3: car
+  4: caravan
+  5: electric_vehicle
+  6: motorcycle
+  7: person
+  8: rider
+  9: traffic_light
+  10: traffic_sign
+  11: truck
+  12: vehicle_fallback
+  13: animal
+  14: wheelchair
+
+# Classes present in COCO but redefined / absent in IDD:
+#   auto_rickshaw   — not in COCO
+#   rider           — not in COCO (person ON a vehicle)
+#   vehicle_fallback— not in COCO
+#   animal          — maps loosely to COCO "cow/horse/dog/cat"
+#   caravan         — not in standard COCO
+#   electric_vehicle— not in COCO
+#   wheelchair      — not in COCO

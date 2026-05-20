@@ -1,0 +1,44 @@
+[project]
+name = "drishtiyolo"
+version = "0.1.0"
+description = "YOLOWorld zero-shot detection for Indian road scenes (IDD classes)"
+requires-python = ">=3.10"
+
+dependencies = [
+    # Core
+    "ultralytics>=8.3.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+
+    # Data / annotation
+    "pycocotools>=2.0.7",
+    "Pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+
+    # Video / webcam
+    "opencv-python>=4.8.0",
+
+    # Demo
+    "gradio>=4.0.0",
+
+    # Experiment tracking
+    "wandb>=0.16.0",
+
+    # Utilities
+    "yt-dlp>=2024.1.0",
+    "tqdm>=4.66.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.13.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.scripts]
+webcam-demo    = "scripts.webcam_demo:main"
+compare-video  = "scripts.side_by_side_video:main"
+
+[tool.uv]
+# PyTorch ships CUDA wheels from its own index.
+# uv will pull CPU wheels from PyPI by default;
+# uncomment the line below for CUDA 12.x wheels:
+# extra-index-url = ["https://download.pytorch.org/whl/cu121"]
